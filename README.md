@@ -38,5 +38,4 @@ Aplikasi Python untuk manajemen data mahasiswa yang memungkinkan pengguna melaku
 - L: Lihat data
 - K: Keluar program
 ## Flowchart
-```mermaid
 ![Flowchart](/flowchart.png)
