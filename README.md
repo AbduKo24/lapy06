@@ -2,16 +2,14 @@
 
 ## Deskripsi Program
 Aplikasi Python untuk manajemen data mahasiswa yang memungkinkan pengguna melakukan operasi CRUD (Create, Read, Update, Delete) pada data mahasiswa.
-
-## Struktur Program
-
-### Komponen Utama
-- `data_mahasiswa`: Dictionary untuk menyimpan data mahasiswa
+# Struktur Program
+## Komponen Utama
+- data_mahasiswa: Dictionary untuk menyimpan data mahasiswa
 - Fungsi utama:
-  - `lihat_data()`: Menampilkan data mahasiswa
-  - `tambah_data()`: Menambah data mahasiswa baru
-  - `ubah_data()`: Mengubah data mahasiswa
-  - `hapus_data()`: Menghapus data mahasiswa
+1. lihat_data(): Menampilkan data mahasiswa
+2. tambah_data(): Menambah data mahasiswa baru
+3. ubah_data(): Mengubah data mahasiswa
+4. hapus_data(): Menghapus data mahasiswa
 
 ### Alur Kerja Program
 1. Pengguna memilih menu (Tambah/Ubah/Hapus/Lihat/Keluar)
@@ -21,9 +19,9 @@ Aplikasi Python untuk manajemen data mahasiswa yang memungkinkan pengguna melaku
 ## Perhitungan Nilai
 - Nilai Akhir = (Tugas * 0.3) + (UTS * 0.35) + (UAS * 0.35)
 - Bobot:
-  - Tugas: 30%
-  - UTS: 35%
-  - UAS: 35%
+1. Tugas: 30%
+2. UTS: 35%
+3. UAS: 35%
 
 ## Fitur Khusus
 - Validasi input mencegah duplikasi NIM
@@ -32,51 +30,13 @@ Aplikasi Python untuk manajemen data mahasiswa yang memungkinkan pengguna melaku
 - Perhitungan otomatis nilai akhir
 
 ## Cara Penggunaan
-- Jalankan script
-- Pilih opsi menu:
- - `T`: Tambah data
-  - `U`: Ubah data
-  - `H`: Hapus data
-  - `L`: Lihat data
-  - `K`: Keluar program
-
-
-## Flowchart 
+1. Jalankan script
+2. Pilih opsi menu:
+- T: Tambah data
+- U: Ubah data
+- H: Hapus data
+- L: Lihat data
+- K: Keluar program
+## Flowchart
 ```mermaid
-flowchart TD
-    A([Start]) --> B[/User Input/]
-    B -->|'T'| C[/Tambah Data/]
-    B -->|'U'| D[/Ubah Data/]
-    B -->|'H'| E[/Hapus Data/]
-    B -->|'L'| F[/Lihat Data/]
-    B -->|'K'| G([End])
-    
-    C --> H{Data Valid?}
-    H -->|Yes| I[/Tambahkan ke data_mahasiswa/]
-    H -->|No| J[/Tampilkan Pesan Kesalahan/]
-    I --> B
-    J --> B
-    
-    D --> K{Nama Ditemukan?}
-    K -->|Yes| L[/Tampilkan Data Lama/]
-    K -->|No| M[/Tampilkan 'Nama Tidak Ditemukan'/]
-    L --> N[/Input Data Baru/]
-    N --> O[/Perbarui Data/]
-    O --> B
-    M --> B
-    
-    E --> P{Data Kosong?}
-    P -->|Yes| Q[/Kembali ke Menu/]
-    P -->|No| R{Nama Ditemukan?}
-    R -->|Yes| S[/Hapus Data/]
-    R -->|No| T[/Tampilkan 'Nama Tidak Ditemukan'/]
-    S --> B
-    T --> B
-    Q --> B
-  F --> U{Ada Data?}
-    U -->|Yes| V[/Tampilkan Tabel Data/]
-    U -->|No| W[/Tampilkan 'Tidak Ada Data'/]
-    V --> B
-    W --> B
-    
-    G --> X([Selesai])
+![Flowchart](/flowchart.png)
